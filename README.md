@@ -1,8 +1,6 @@
-Certainly! Here's a sample README for a Django-React To-Do app:
-
 # Django React To-Do App
 
-A simple To-Do application built with Django on the backend and React on the frontend. This app allows users to manage their tasks, add new to-dos, mark tasks as completed, and delete tasks.
+A simple To-Do application built with Django on the backend and React-Vite on the frontend. This app allows users to manage their tasks, add new to-dos, mark tasks as completed, and delete tasks.
 
 ## Features
 
@@ -10,13 +8,13 @@ A simple To-Do application built with Django on the backend and React on the fro
 - Mark tasks as completed.
 - Delete tasks from the to-do list.
 - User-friendly interface with a clean and responsive design.
-- Integration of Django for backend logic and React for dynamic frontend updates.
+- Integration of Django for backend logic and React-Vite for dynamic frontend updates.
 
 ## Technologies Used
 
 - **Django:** A high-level Python web framework used for the backend.
 - **Django Rest Framework:** A powerful and flexible toolkit for building Web APIs with Django.
-- **React:** A JavaScript library for building user interfaces.
+- **React-Vite:** A JavaScript library for building user interfaces.
 - **React Hooks:** Used for state management in functional components.
 - **Fetch API:** Used for making asynchronous requests to the Django backend.
 - **Bootstrap:** Frontend framework for responsive design and styling.
@@ -110,5 +108,3 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 - This project was created as part of a learning experience for Django and React development.
 - Inspired by various to-do applications and tutorials available online.
-
-Feel free to customize this README according to the specifics of your Django-React To-Do app.
