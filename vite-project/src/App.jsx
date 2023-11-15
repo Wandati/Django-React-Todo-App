@@ -179,39 +179,44 @@ function App() {
         )}
 
         {todos.length !== 0 && (
-          <table className="table mt-5">
-            <thead>
-              <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Completed</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="table-group-divider">
-              {todos.map((todo) => (
-                <tr key={todo.id}>
-                  <td>{todo.title}</td>
-                  <td>{todo.description}</td>
-                  <td>{todo.completed ? "True" : "False"}</td>
-                  <td>
-                    <button
-                      onClick={() => handleUpdate(todo)}
-                      className="btn btn-outline-dark btn-sm m-2"
-                    >
-                      Update
-                    </button>
-                    <button
-                      onClick={() => handleDelete(todo.id)}
-                      className="btn btn-outline-danger btn-sm"
-                    >
-                      Delete
-                    </button>
-                  </td>
+          <>
+            <table className="table mt-5">
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Completed</th>
+                  <th scope="col">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="table-group-divider">
+                {todos.map((todo) => (
+                  <tr key={todo.id}>
+                    <td>{todo.title}</td>
+                    <td>{todo.description}</td>
+                    <td>{todo.completed ? "True" : "False"}</td>
+                    <td>
+                      <button
+                        onClick={() => handleUpdate(todo)}
+                        className="btn btn-outline-dark btn-sm m-2"
+                      >
+                        Update
+                      </button>
+                      <button
+                        onClick={() => handleDelete(todo.id)}
+                        className="btn btn-outline-danger btn-sm"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <button onClick={handleAdd} className="btn btn-outline-dark mt-3">
+              Add Another Todo
+            </button>
+          </>
         )}
       </div>
     </>
