@@ -12,7 +12,7 @@ function App() {
   const [selectedTodo, setSelectedTodo] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/todo/")
+    fetch("https://django-api-lqpg.onrender.com/api/todo/")
       .then((res) => res.json())
       .then((data) => {
         setTodos(data);
@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   const handleDelete = async (id) => {
-    const response = await fetch(`http://127.0.0.1:8000/api/todo/${id}`, {
+    const response = await fetch(`https://django-api-lqpg.onrender.com/api/todo/${id}`, {
       method: "DELETE",
     });
 
@@ -65,7 +65,7 @@ function App() {
 
     if (selectedTodo) {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/todo/${selectedTodo.id}/`,
+        `https://django-api-lqpg.onrender.com/api/todo/${selectedTodo.id}/`,
         {
           method: "PUT",
           headers: {
@@ -93,7 +93,7 @@ function App() {
         alert("Something Went Wrong");
       }
     } else {
-      const response = await fetch("http://127.0.0.1:8000/api/todo/", {
+      const response = await fetch("https://django-api-lqpg.onrender.com/api/todo/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
