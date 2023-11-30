@@ -75,6 +75,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Test.wsgi.application'
 CORS_ALLOWED_ORIGINS = [
    "http://localhost:5173",
+    "https://django-react-todo-app-orcin.vercel.app/"
     
 ]
 
