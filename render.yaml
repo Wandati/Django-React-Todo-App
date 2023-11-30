@@ -1,0 +1,6 @@
+services:
+  - name: web
+    type: web
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn Test.wsgi:application --workers 4 --worker-class=gthread --threads 4
