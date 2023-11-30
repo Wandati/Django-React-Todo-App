@@ -84,7 +84,7 @@ function App() {
           completed: false,
         });
         setSelectedTodo(null);
-        fetch("http://127.0.0.1:8000/api/todo/")
+        fetch("https://django-api-lqpg.onrender.com/api/todo/")
           .then((res) => res.json())
           .then((data) => {
             setTodos(data);
