@@ -18,19 +18,42 @@ function App() {
         setTodos(data);
       });
   }, []);
-
   const handleDelete = async (id) => {
-    const response = await fetch(`https://django-api-lqpg.onrender.com/api/todo/${id}`, {
-      method: "DELETE",
-    });
+ 
+  const isConfirmed = window.confirm("Are you sure you want to delete this todo?");
 
-    if (response.ok) {
-      alert("Todo Successfully Deleted...");
-      setTodos(todos.filter((todo) => todo.id !== id));
-    } else {
-      alert("Something Went Wrong");
+  if (isConfirmed) {
+    try {
+      const response = await fetch(`https://django-api-lqpg.onrender.com/api/todo/${id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        alert("Todo Successfully Deleted...");
+        setTodos(todos.filter((todo) => todo.id !== id));
+      } else {
+        alert("Something Went Wrong");
+      }
+    } catch (error) {
+      console.error("Error deleting todo:", error);
+      alert("An error occurred while deleting the todo");
     }
-  };
+  }
+};
+
+
+  // const handleDelete = async (id) => {
+  //   const response = await fetch(`https://django-api-lqpg.onrender.com/api/todo/${id}`, {
+  //     method: "DELETE",
+  //   });
+
+  //   if (response.ok) {
+  //     alert("Todo Successfully Deleted...");
+  //     setTodos(todos.filter((todo) => todo.id !== id));
+  //   } else {
+  //     alert("Something Went Wrong");
+  //   }
+  // };
 
   const handleUpdate = (todo) => {
     setFormData({
